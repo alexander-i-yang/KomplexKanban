@@ -1,3 +1,6 @@
+#ifndef KOMPLEXKANBAN_TEST1_H
+#define KOMPLEXKANBAN_TEST1_H
+
 #include <iostream>
 using namespace std;
 
@@ -34,3 +37,5 @@ double real(const Complex& the);
 ///Returns the imaginary part of the parameter
 /// \param the Complex number to find the imaginary part of
 double imaginary(const Complex& the);
+
+#endif //KOMPLEXKANBAN_TEST1_H
