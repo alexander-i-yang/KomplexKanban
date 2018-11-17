@@ -48,5 +48,4 @@ class Complex {
         //equals operator: checks real and imaginary parts to see if they're equal
         //bool operator==(Complex& me);
 };
-
 #endif //KOMPLEXKANBAN_TEST1_H
