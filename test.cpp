@@ -4,6 +4,7 @@
 #include "arithmetic.h"
 
 #define PI 3.1415926538979323846
+
 using namespace std;
 
 int main() {
@@ -24,5 +25,10 @@ int main() {
     cout << polar(1, PI/2) << endl;
     cout << polar(1, PI) << endl;
     cout << polar(1, 3*PI/2) << endl;
+
+    Complex comp6;
+    cin >> comp6;
+    cout << comp6 << endl;
+
     return 0;
 }

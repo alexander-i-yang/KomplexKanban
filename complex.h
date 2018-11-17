@@ -18,6 +18,15 @@ class Complex {
      * @author Alex Yang
      */
     friend ostream& operator<<(ostream& out, const Complex& me);
+    /**
+     * Reads in a pair of values in parentheses, separated by a comma and a space (optional). Defaults to (0, 0)
+     * @bug The error handling is likely incorrect
+     * @param is The instream (usually cin) to read in
+     * @param com The complex number to read in values to
+     * @return the istream is
+     * @author Alex Yang
+     */
+    friend istream& operator>> (istream& is, Complex& com);
     private:
         ///Real part
         double re;
@@ -48,4 +57,5 @@ class Complex {
         //equals operator: checks real and imaginary parts to see if they're equal
         //bool operator==(Complex& me);
 };
+
 #endif //KOMPLEXKANBAN_TEST1_H

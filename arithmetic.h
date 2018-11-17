@@ -4,7 +4,6 @@
 
 #include <complex>
 #include "arithmetic.h"
-#include "complex.h"
 
 /**
  * Returns the absolute value (sqrt(a^2+b^2)) of com
@@ -12,7 +11,7 @@
  * @return the absolute value of com
  * @author Alex Yang
  */
-double abs(const Complex com);
+double abs(Complex com);
 
 /**
  * Returns the angle (arctangent(a/b)) of com IN RADIANS
@@ -20,7 +19,7 @@ double abs(const Complex com);
  * @return the angle of com IN RADIANS
  * @author Alex Yang
  */
-double arg(const Complex com);
+double arg(Complex com);
 
 /**
  * Returns the conjugate of com (a-bi)
@@ -28,7 +27,7 @@ double arg(const Complex com);
  * @return the conjugate of com
  * @author Alex Yang
  */
-Complex conj(const Complex com);
+Complex conj(Complex com);
 
 /**
  * Returns the imaginary part of the parameter
@@ -43,7 +42,7 @@ double imag(const Complex& com);
  * @param com The complex number to find the normal of
  * @return the normal a^2+b^2
  */
-double norm(const Complex com);
+double norm(Complex com);
 
 /**
  * Creates a complex number with magnitude mag and angle ang (IN RADIANS)
