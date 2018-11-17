@@ -36,10 +36,21 @@ Complex conj(const Complex com);
  * @return the imaginary part of com
  * @author Alex Yang
  */
-double imaginary(const Complex& com);
+double imag(const Complex& com);
 
+/**
+ * Returns a^2+b^2
+ * @param com The complex number to find the normal of
+ * @return the normal a^2+b^2
+ */
 double norm(const Complex com);
 
+/**
+ * Creates a complex number with magnitude mag and angle ang (IN RADIANS)
+ * @param mag The magnitude of the resulting complex number
+ * @param ang The angle of the resulting complex number IN RADIANS
+ * @return The complex number formed by mag and ang
+ */
 Complex polar(double mag, double ang=0.0);
 
 /**

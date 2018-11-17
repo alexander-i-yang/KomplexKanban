@@ -9,9 +9,9 @@ using namespace std;
 
 class Complex {
     friend double real(const Complex &com);
-    friend double imaginary(const Complex &the);
+    friend double imag(const Complex &the);
     /**
-     * Format: [real] [+ or -] [imaginary]i. If imaginary is 1 or -1, don't print it out.
+     * Format: (real, imaginary). Does not include "i".
      * @param out ostream
      * @param me complex number to print
      * @return out
