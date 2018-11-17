@@ -1,23 +1,11 @@
 #include "complex.h"
+#include "arithmetic.h"
 
 Complex::Complex() {Complex(0.0, 0.0);}
 
 Complex::Complex(double r, double i) {re = r; im = i;}
 
 Complex::Complex(double r) {Complex(r, 0);}
-
-double real(const Complex &the) {
-    return the.re;
-}
-
-double imaginary(const Complex &the) {
-    return the.im;
-}
-
-Complex conj(const Complex com) {
-    Complex ret(real(com), -1*imaginary(com));
-    return ret;
-}
 
 ostream& operator<<(ostream& out, const Complex& me) {
     string plus = " + "; //Declares string in the event that me.im is positive
@@ -27,7 +15,11 @@ ostream& operator<<(ostream& out, const Complex& me) {
         plus = " - ";
         imaginary *= -1; //If I didn't make imaginary negative, the output would look like "a - -bi"
     }
-    out << real << plus << imaginary << "i";
+    out << real << plus;
+    if(me.im != 1 && me.im != -1) { //if im is 1 or -1, there's no need to print it out. Just print "i"
+        out << imaginary;
+    }
+    out << "i";
     return out;
 }
 
