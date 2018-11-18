@@ -49,20 +49,89 @@ private:
         Complex();
 
         /**
-         * Initiaization constructor that takes one value
+         * Initiaization constructor that takes one value to be assigned to the real part
          * @param r the real part of the Complex object
          * @author Alex Yang
          */
         Complex(double r);
 
+        /**
+         * Adds real and imaginary parts of this complex number and b
+         * @param b The second complex number to add to this one
+         * @return The resulting complex number
+         * @author Alex yang
+         */
+        Complex operator+(Complex b);
+
+        /**
+         * Subtracts real and imaginary parts of this complex number and b
+         * @param b The second complex number to subtract from this one
+         * @return The resulting complex number
+         * @author Alex yang
+         */
+        Complex operator-(Complex b);
+
+        /**
+         * Multiplies this complex number and b. Results in (ab-cd)+(ac+bd)i.
+         * @param b The second complex number to subtract from this one
+         * @return The resulting complex number
+         * @author Alex yang
+         */
+        Complex operator*(Complex b);
+
+        /**
+         * Multiplies this complex number and b. Results in (ab-cd)+(ac+bd)i.
+         * @param b The second complex number to subtract from this one
+         * @return The resulting complex number
+         * @author Alex yang
+         */
+        Complex operator/(Complex& b);
+
+        /**
+        * The real number part of a is set to the real part of b. Same for the imaginary part.
+        * @param b The complex number that is assigned to a
+        * @return The "this" pointer
+        * @author Alex Yang
+        */
+        Complex& operator= (Complex b);
+
+        /**
+         * Adds the real part of a to the real part of b. Same for the imaginary part.
+         * @param b The complex number to add to this one
+         * @return The "this" pointer
+         * @author Alex Yang
+         */
+        Complex& operator+= (Complex& b);
+
+        /**
+         * Subtracts the real part of b from the real part of b. Same for the imaginary part.
+         * @param b The complex number to subtract from this one
+         * @return The "this pointer"
+         * @author Alex Yang
+         */
+        Complex& operator-= (Complex& b);
+
+        /**
+         * Multiplies this Complex number with b. Results in (ab-cd)+(bc+ad)i.
+         * @param b The complex number to multiply with this one
+         * @return The "this pointer"
+         * @author Alex Yang
+         */
+        Complex& operator*= (Complex& b);
+
+        /**
+         * Divides this complex number and b.
+         * @param b The second complex number to divide by this one
+         * @return The resulting complex number
+         * @author Alex yang
+         */
+        Complex& operator/=(Complex b);
+
+        bool operator==(const Complex &rhs) const;
+
+        bool operator!=(const Complex &rhs) const;
         //equals operator: checks real and imaginary parts to see if they're equal
-        //bool operator==(Complex& me);
-/**
- * The real number part of a is set to the real part of b. Same for the imaginary part.
- * @param a The complex number that is being changed
- * @param b The complex number that is assigned to a
- */
-void operator= (Complex& b);
+            //bool operator==(Complex& me);
 };
 
 #endif //KOMPLEXKANBAN_TEST1_H

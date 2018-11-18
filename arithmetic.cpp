@@ -51,3 +51,12 @@ Complex polar(double mag, double ang=0.0) {
 double real(const Complex& com) {
     return com.re;
 }
+
+bool Complex::operator==(const Complex &rhs) const {
+    return re == rhs.re &&
+           im == rhs.im;
+}
+
+bool Complex::operator!=(const Complex &rhs) const {
+    return !(rhs == *this);
+}

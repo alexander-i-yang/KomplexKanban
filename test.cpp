@@ -26,10 +26,13 @@ int main() {
     cout << polar(1, PI) << endl;
     cout << polar(1, 3*PI/2) << endl;
 
-    Complex comp6 = comp1;
+    cout << "\nTesting assignment operators" <<endl;
+    Complex comp6 = comp;
     cout << comp6 << endl;
-    comp6 = comp5;
-    cout << comp6 << endl;
+    cout << comp6 << " + " << comp5 << " = " << (comp6+=comp5) << endl;
+    cout << comp6 << " - " << comp2 << " = " << (comp6-=comp2) << endl;
+    cout << comp6 << " * " << comp1 << " = " << (comp6*=comp1) <<endl;
+    cout << comp6 << " / " << comp3 << " = " << (comp6/=comp3) << endl;
 
     return 0;
 }

@@ -34,9 +34,53 @@ istream& operator>> (istream& is, Complex& com)
     return is;
 }
 
-void Complex::operator= (Complex& b) {
+Complex Complex::operator+(Complex b) {
+    Complex ret(re+b.re, im+b.im);
+    return ret;
+}
+
+Complex Complex::operator-(Complex b) {
+    Complex ret(re-b.re, im-b.im);
+    return ret;
+}
+
+Complex Complex::operator*(Complex b) {
+    Complex ret(re*b.re-im*b.im, im*b.re+b.im*re);
+    return ret;
+}
+
+Complex Complex::operator/(Complex& b) {
+    double div = norm(b);
+    Complex ret = *this*conj(b);
+    ret.re /= div;
+    ret.im /= div;
+    return ret;
+}
+
+Complex& Complex::operator= (Complex b) {
     re = b.re;
     im = b.im;
+    return *this;
+}
+
+Complex &Complex::operator+=(Complex &b) {
+    *this = *this + b;
+    return *this;
+}
+
+Complex &Complex::operator-=(Complex &b) {
+    *this = *this - b;
+    return *this;
+}
+
+Complex& Complex::operator*= (Complex& b) {
+    *this = *this*b;
+    return *this;
+}
+
+Complex &Complex::operator/=(Complex b) {
+    *this = *this/b;
+    return *this;
 }
 
 //equals operator: checks real and imaginary parts to see if they're equal
