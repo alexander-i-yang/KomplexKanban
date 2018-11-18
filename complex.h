@@ -27,7 +27,8 @@ class Complex {
      * @author Alex Yang
      */
     friend istream& operator>> (istream& is, Complex& com);
-    private:
+
+private:
         ///Real part
         double re;
         ///Imaginary part
@@ -56,6 +57,12 @@ class Complex {
 
         //equals operator: checks real and imaginary parts to see if they're equal
         //bool operator==(Complex& me);
+/**
+ * The real number part of a is set to the real part of b. Same for the imaginary part.
+ * @param a The complex number that is being changed
+ * @param b The complex number that is assigned to a
+ */
+void operator= (Complex& b);
 };
 
 #endif //KOMPLEXKANBAN_TEST1_H

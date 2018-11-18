@@ -34,6 +34,11 @@ istream& operator>> (istream& is, Complex& com)
     return is;
 }
 
+void Complex::operator= (Complex& b) {
+    re = b.re;
+    im = b.im;
+}
+
 //equals operator: checks real and imaginary parts to see if they're equal
 /*bool Complex::operator==(Complex& other) {
     return other.real == real && other.imaginary == imaginary;

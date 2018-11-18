@@ -26,8 +26,9 @@ int main() {
     cout << polar(1, PI) << endl;
     cout << polar(1, 3*PI/2) << endl;
 
-    Complex comp6;
-    cin >> comp6;
+    Complex comp6 = comp1;
+    cout << comp6 << endl;
+    comp6 = comp5;
     cout << comp6 << endl;
 
     return 0;
