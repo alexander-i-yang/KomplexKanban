@@ -52,11 +52,35 @@ double real(const Complex& com) {
     return com.re;
 }
 
-bool Complex::operator==(const Complex &rhs) const {
-    return re == rhs.re &&
-           im == rhs.im;
+Complex sin(Complex& com) {
+    //sin(a)*cosh(b)+i*cos(a)*sinh(b). Math, right?
+    double comRe = real(com);
+    double comIm = imag(com);
+    double re = sin(comRe)*cosh(comIm);
+    double im = cos(comRe)*sinh(comIm);
+    Complex ret(re, im);
+    return ret;
 }
 
-bool Complex::operator!=(const Complex &rhs) const {
-    return !(rhs == *this);
+Complex cos(Complex& com) {
+    double comRe = real(com);
+    double comIm = imag(com);
+    double re = cos(comRe)*cosh(comIm);
+    double im = -1*sin(comRe)*sinh(comIm);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex tan(Complex& com) {
+    double comRe = real(com);
+    double comIm = imag(com);
+    //Real and imaginary parts for the numerator
+    double topRe = sin(comRe)*cosh(comIm);
+    double topIm = cos(comRe)*sinh(comIm);
+    //Real and imaginary parts for the denominator
+    double bottomRe = cos(comRe)*cosh(comIm);
+    double bottomIm = -1*sin(comRe)*sinh(comIm);
+    Complex top(topRe, topIm);
+    Complex bottom(bottomRe, bottomIm);
+    return top/bottom;
 }
