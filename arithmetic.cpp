@@ -14,6 +14,8 @@ double arg(const Complex com) {
     if(imag(com) < 0 && real(com) < 0) {
         //arcTangent has a limited domain. Check both components of com and change angle accordingly
         ret -= PI;
+    } else if(real(com) < 0) {
+        ret += PI;
     }
     return ret;
 }
@@ -82,5 +84,34 @@ Complex tan(Complex& com) {
     double bottomIm = -1*sin(comRe)*sinh(comIm);
     Complex top(topRe, topIm);
     Complex bottom(bottomRe, bottomIm);
+    return top/bottom;
+}
+
+Complex sinh(Complex& com) {
+    //sinh(a)*cos(b)+i*cosh(a)*sin(b)
+    double comRe = real(com);
+    double comIm = imag(com);
+    double re = sinh(comRe)*cos(comIm);
+    double im = cosh(comRe)*sin(comIm);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex cosh(Complex& com) {
+    //cosh(a)*cos(b)+i*sinh(a)*sin(b)
+    double comRe = real(com);
+    double comIm = imag(com);
+    double re = cosh(comRe)*cos(comIm);
+    double im = sinh(comRe)*sin(comIm);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex tanh(Complex& com) {
+    //(tanh(x) + i tan(y)) / (1 +i tanh(x) tan(y))
+    double re = real(com);
+    double im = imag(com);
+    Complex top(tanh(re), tan(im));
+    Complex bottom(1, tanh(re)*tan(im));
     return top/bottom;
 }

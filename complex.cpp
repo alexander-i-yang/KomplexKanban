@@ -57,30 +57,39 @@ Complex Complex::operator/(Complex& b) {
     return ret;
 }
 
-Complex& Complex::operator= (Complex b) {
+Complex Complex::operator= (Complex b) {
     re = b.re;
     im = b.im;
     return *this;
 }
 
-Complex &Complex::operator+=(Complex &b) {
+Complex Complex::operator+=(Complex &b) {
     *this = *this + b;
     return *this;
 }
 
-Complex &Complex::operator-=(Complex &b) {
+Complex Complex::operator-=(Complex &b) {
     *this = *this - b;
     return *this;
 }
 
-Complex& Complex::operator*= (Complex& b) {
+Complex Complex::operator*= (Complex& b) {
     *this = *this*b;
     return *this;
 }
 
-Complex &Complex::operator/=(Complex b) {
+Complex Complex::operator/=(Complex b) {
     *this = *this/b;
     return *this;
+}
+
+bool Complex::operator==(const Complex &rhs) const {
+    return re == rhs.re &&
+           im == rhs.im;
+}
+
+bool Complex::operator!=(const Complex &rhs) const {
+    return !(rhs == *this);
 }
 
 //equals operator: checks real and imaginary parts to see if they're equal

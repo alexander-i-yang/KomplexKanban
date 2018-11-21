@@ -81,8 +81,32 @@ Complex cos(Complex& com);
 /**
  * Returns the tangent of the argument in the form (sin(a)*cosh(b)+i*cos(a)*sinh(b))/(cos(a)*cosh(b)−i*sin(a)*sinh(b))
  * @param com The complex number to find the cosine of
- * @return A complex number that is the cosine of com
+ * @return A complex number that is the tangent of com
  * @author Alex Yang
  */
 Complex tan(Complex& com);
+
+/**
+ * Returns the hyperbolic sine of the argument in the form sinh(a)*cos(b)+i*cosh(a)*sin(b).
+ * @param com The complex number to find the sinh of
+ * @return A complex number that is the sinh of com
+ * @author Alex Yang
+ */
+Complex sinh(Complex& com);
+
+/**
+ * Returns the hyperbolic cosine of the argument in the form cosh(a)*cos(b)+i*sinh(a)*sin(b).
+ * @param com The complex number to find the cosh of
+ * @return A complex number that is the cosh of com
+ * @author Alex Yang
+ */
+Complex cosh(Complex& com);
+
+/**
+ * Returns the hyperbolic tangent of the argument in the form (tanh(a)+i*tan(b))/(1+i*tanh(x)*tan(y))
+ * @param com The complex number to find the tanh of
+ * @return A complex number that is the tanh of com
+ * @author Alex Yang
+ */
+Complex tanh(Complex& com);
 #endif //KOMPLEXKANBAN_ARITHMETIC_H

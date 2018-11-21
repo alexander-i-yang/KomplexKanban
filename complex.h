@@ -93,7 +93,7 @@ private:
         * @return The "this" pointer
         * @author Alex Yang
         */
-        Complex& operator= (Complex b);
+        Complex operator= (Complex b);
 
         /**
          * Adds the real part of a to the real part of b. Same for the imaginary part.
@@ -101,7 +101,7 @@ private:
          * @return The "this" pointer
          * @author Alex Yang
          */
-        Complex& operator+= (Complex& b);
+        Complex operator+= (Complex& b);
 
         /**
          * Subtracts the real part of b from the real part of b. Same for the imaginary part.
@@ -109,7 +109,7 @@ private:
          * @return The "this pointer"
          * @author Alex Yang
          */
-        Complex& operator-= (Complex& b);
+        Complex operator-= (Complex& b);
 
         /**
          * Multiplies this Complex number with b. Results in (ab-cd)+(bc+ad)i.
@@ -117,7 +117,7 @@ private:
          * @return The "this pointer"
          * @author Alex Yang
          */
-        Complex& operator*= (Complex& b);
+        Complex operator*= (Complex& b);
 
         /**
          * Divides this complex number and b.
@@ -125,7 +125,7 @@ private:
          * @return The resulting complex number
          * @author Alex yang
          */
-        Complex& operator/=(Complex b);
+        Complex operator/=(Complex b);
 
         bool operator==(const Complex &rhs) const;
 
