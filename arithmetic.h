@@ -109,4 +109,54 @@ Complex cosh(Complex& com);
  * @author Alex Yang
  */
 Complex tanh(Complex& com);
+
+/**
+ * Returns the inverse sine of the argument in the form -i*ln(i*com+(1-com^2)^(1/2))
+ * @param com The complex number to find the inverse sine of
+ * @return A complex number that is the inverse sin of com
+ * @author Alex Yang
+ */
+Complex asin(Complex& com);
+
+/**
+ * Returns the inverse cosine of the argument.
+ * @param com The complex number to find the inverse cosine of
+ * @return A complex number that is the inverse cosine of com
+ * @author Alex Yang
+ */
+Complex acos(Complex& com);
+
+/**
+ * Returns the inverse tangent of the argument
+ * @param com The complex number to find the inverse tangent of
+ * @return A complex number that is the inverse tangent of com
+ * @author Alex Yang
+ */
+Complex atan(Complex& com);
+
+/**
+ * Returns the log of com in the format ln(abs(com))+i*arg(com).
+ * @param com The complex number to find the natural log of.
+ * @return The natural log of com
+ * @author Alex Yang
+ */
+Complex log(Complex com);
+
+/**
+ * Returns a complex number that is com^exp. Solves in the form |com|^exp * (cos(exp*arg(z))+i*sin(exp*arg(z)))
+ * @param com The complex number to raise to the power of exp
+ * @param exp The exponent to raise com to the power of
+ * @return com^exp
+ * @author Alex Yang
+ */
+Complex pow(Complex& com, int exp);
+
+/**
+ * Returns the 1st of the nth root of com.
+ * @param com The complex number to find the root of
+ * @param exp The root number to calculate
+ * @return The first root of the com
+ * @author Alex yang
+ */
+Complex root(Complex& com, int exp);
 #endif //KOMPLEXKANBAN_ARITHMETIC_H

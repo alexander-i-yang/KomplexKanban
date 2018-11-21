@@ -48,5 +48,18 @@ int main() {
     cout << "cosh" << comp << "\t\t= " << cosh(comp) << endl;
     cout << "tanh" << comp5 << "\t\t= " << tanh(comp5) << endl;
 
+    cout << "\nTesting inverse sine functions" << endl;
+    cout << "asin" << comp6 << "\t= " << asin(comp6) << endl;
+    cout << "acos" << comp << "\t= " << acos(comp) << endl;
+    cout << "atan" << comp1 << "\t= " << atan(comp1) << endl;
+
+    cout << "\nTesting power functions" << endl;
+    cout << comp6 << "^2" << "\t= " << pow(comp6, 2) << endl;
+    //TODO: Implement the rest of the power functions
+
+    cout << "\nTesting logarithmic functions" << endl;
+    //TODO: Implement the rest of the logarithmic functions
+    cout << "ln" << comp6 << "\t= " << log(comp6) << endl;
+
     return 0;
 }

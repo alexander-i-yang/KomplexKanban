@@ -115,3 +115,51 @@ Complex tanh(Complex& com) {
     Complex bottom(1, tanh(re)*tan(im));
     return top/bottom;
 }
+
+Complex log(Complex com) {
+    double re = log(abs(com));
+    double im = arg(com);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex pow(Complex& com, int exp) {
+    double angle = arg(com);
+    double magnitude = abs(com);
+    double re = pow(magnitude, exp) * cos(exp*angle);
+    double im = pow(magnitude, exp) * sin(exp*angle);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex root(Complex& com, int exp) {
+    double angle = arg(com);
+    double magnitude = abs(com);
+    double re = pow(magnitude, 1.0/exp) * cos(angle/exp);
+    double im = pow(magnitude, 1.0/exp) * sin(angle/exp);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex asin(Complex& com) {
+    Complex i(0, 1);
+    Complex negativeI(0, -1);
+    Complex comSquared = pow(com, 2);
+    Complex oneMinusComSquared(1-real(comSquared), -1*imag(comSquared));
+    Complex ret = negativeI * log(i*com+root(oneMinusComSquared, 2));
+    return ret;
+}
+
+Complex acos(Complex& com) {
+    Complex ret(PI/2-real(asin(com)), -1*imag(asin(com)));
+    return ret;
+}
+
+Complex atan(Complex& com) {
+    Complex oneHalfI(0, 0.5);
+    Complex i(0, 1);
+    Complex oneMinusITimesCom(1-real(i*com), -1*imag(i*com));
+    Complex onePlusITimesCom(1+real(i*com), imag(i*com));
+    Complex ret = oneHalfI*log(oneMinusITimesCom)-oneHalfI*log(onePlusITimesCom);
+    return ret;
+}
