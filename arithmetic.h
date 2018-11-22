@@ -4,6 +4,7 @@
 
 #include <complex>
 #include "arithmetic.h"
+#include "complex.h"
 
 /**
  * Returns the absolute value (sqrt(a^2+b^2)) of com
@@ -60,7 +61,74 @@ Complex polar(double mag, double ang=0.0);
  */
 double real(const Complex& com);
 
-///TRIG FUNCTIONS
+
+/**
+ * Returns the log of com in the format ln(abs(com))+i*arg(com).
+ * @param com The complex number to find the natural log of.
+ * @return The natural log of com
+ * @author Alex Yang
+ */
+Complex log(Complex com);
+
+/**
+ * Returns the log base 10 of com
+ * @param com The complex number to find the log_10 of
+ * @return log base 10 of com
+ * @author Alex Yang
+ */
+Complex log10(Complex& com);
+
+/**
+ * Returns a complex number that is com^exp. Solves in the form |com|^exp * (cos(exp*arg(z))+i*sin(exp*arg(z)))
+ * @param b The complex number to raise to the power of exp
+ * @param exp The exponent to raise com to the power of
+ * @return com^exp
+ * @author Alex Yang
+ */
+Complex pow(Complex& b, int exp);
+
+/**
+ * Raises b to the power of exp
+ * @param b The base
+ * @param exp The exponent
+ * @return b^exp
+ * @author Alex Yang
+ */
+Complex pow(double b, Complex& exp);
+
+/**
+ * Returns the 1st of the nth root of com.
+ * @param b The complex number to find the nth root of
+ * @param exp The root number to calculate
+ * @return The first root of the com
+ * @author Alex yang
+ */
+Complex root(Complex& b, int exp);
+
+/**
+ * Raises b to the power of exp
+ * @param b Complex base
+ * @param exp Double value of exponent
+ * @return b^exp
+ * @author Alex Yang
+ */
+Complex pow(Complex& b, double exp);
+
+/**
+ * Raises com to the power of exp.
+ * @param b The base of the operation
+ * @param exp The complex exponent
+ * @return com^exp
+ * @author Alex Yang
+ */
+Complex pow(Complex& b, Complex& exp);
+
+/**
+ * Returns the square root of com
+ * @param com The complex number to find the square root of
+ * @return The square root of com
+ */
+Complex sqrt(Complex& com);
 
 /**
  * Returns the sine of the argument in the form sin(a)*cosh(b)+i*cos(a)*sinh(b). Math, right?
@@ -133,30 +201,4 @@ Complex acos(Complex& com);
  * @author Alex Yang
  */
 Complex atan(Complex& com);
-
-/**
- * Returns the log of com in the format ln(abs(com))+i*arg(com).
- * @param com The complex number to find the natural log of.
- * @return The natural log of com
- * @author Alex Yang
- */
-Complex log(Complex com);
-
-/**
- * Returns a complex number that is com^exp. Solves in the form |com|^exp * (cos(exp*arg(z))+i*sin(exp*arg(z)))
- * @param com The complex number to raise to the power of exp
- * @param exp The exponent to raise com to the power of
- * @return com^exp
- * @author Alex Yang
- */
-Complex pow(Complex& com, int exp);
-
-/**
- * Returns the 1st of the nth root of com.
- * @param com The complex number to find the root of
- * @param exp The root number to calculate
- * @return The first root of the com
- * @author Alex yang
- */
-Complex root(Complex& com, int exp);
 #endif //KOMPLEXKANBAN_ARITHMETIC_H

@@ -2,6 +2,7 @@
 #include "complex.h"
 
 #define PI 3.1415926538979323846
+#define EULER 2.71828182845904523536
 
 double abs(const Complex me) {
     double re = real(me);
@@ -52,6 +53,63 @@ Complex polar(double mag, double ang=0.0) {
 
 double real(const Complex& com) {
     return com.re;
+}
+
+Complex pow(double b, Complex& com) {
+    double angle = imag(com)*log(b);
+    double mag = pow(b, real(com));
+    Complex ret = polar(mag, angle);
+    return ret;
+}
+
+Complex pow(Complex& com, double exp) {
+    double angle = arg(com);
+    double magnitude = abs(com);
+    double re = pow(magnitude, exp) * cos(exp*angle);
+    double im = pow(magnitude, exp) * sin(exp*angle);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex pow(Complex& com, int exp) {
+    double expD = exp;
+    return pow(com, expD);
+}
+
+Complex pow(Complex& com, Complex& exp) {
+    double expRe = real(exp), expIm = imag(exp);
+    double mag = pow(norm(com), 0.5*expRe)*std::exp(-1*expIm*arg(com));
+    double angle = expRe*arg(com)+0.5*expIm*log(norm(com));
+    Complex ret = polar(mag, angle);
+    return ret;
+
+}
+
+Complex root(Complex& com, int exp) {
+    double angle = arg(com);
+    double magnitude = abs(com);
+    double re = pow(magnitude, 1.0/exp) * cos(angle/exp);
+    double im = pow(magnitude, 1.0/exp) * sin(angle/exp);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex sqrt(Complex& com) {
+    return root(com, 2);
+}
+
+Complex log(Complex com) {
+    double re = log(abs(com));
+    double im = arg(com);
+    Complex ret(re, im);
+    return ret;
+}
+
+Complex log10(Complex& com) {
+    double re = log10(abs(com));
+    double im = log10(EULER) * arg(com);
+    Complex ret(re, im);
+    return ret;
 }
 
 Complex sin(Complex& com) {
@@ -114,31 +172,6 @@ Complex tanh(Complex& com) {
     Complex top(tanh(re), tan(im));
     Complex bottom(1, tanh(re)*tan(im));
     return top/bottom;
-}
-
-Complex log(Complex com) {
-    double re = log(abs(com));
-    double im = arg(com);
-    Complex ret(re, im);
-    return ret;
-}
-
-Complex pow(Complex& com, int exp) {
-    double angle = arg(com);
-    double magnitude = abs(com);
-    double re = pow(magnitude, exp) * cos(exp*angle);
-    double im = pow(magnitude, exp) * sin(exp*angle);
-    Complex ret(re, im);
-    return ret;
-}
-
-Complex root(Complex& com, int exp) {
-    double angle = arg(com);
-    double magnitude = abs(com);
-    double re = pow(magnitude, 1.0/exp) * cos(angle/exp);
-    double im = pow(magnitude, 1.0/exp) * sin(angle/exp);
-    Complex ret(re, im);
-    return ret;
 }
 
 Complex asin(Complex& com) {
