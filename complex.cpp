@@ -1,4 +1,4 @@
-#include "complex.h"
+#include <complex>
 #include "arithmetic.h"
 
 Complex::Complex() {Complex(0.0, 0.0);}
@@ -20,8 +20,8 @@ istream& operator>> (istream& is, Complex& com)
     double im = 0;
     //Make sure the user inputted something useful instead of a weird value like "a"
     try {
-        re = stod(ret.substr(ret.find("(")+1, ret.find(",")-1));
-        int imIndex = ret.find(",");
+        re = stod(ret.substr(ret.find('(')+1, ret.find(',')-1));
+        int imIndex = ret.find(',');
         //Account for the possibility that there might be a space, and if so, increment imIndex
         if(ret.at(imIndex+1) == ' ') {imIndex++;}
         im = stod(ret.substr(imIndex+1, ret.length()-imIndex-2));
@@ -57,13 +57,13 @@ Complex Complex::operator/(Complex& b) {
     return ret;
 }
 
-Complex Complex::operator= (Complex b) {
+Complex& Complex::operator= (Complex b) {
     re = b.re;
     im = b.im;
     return *this;
 }
 
-Complex Complex::operator+=(Complex &b) {
+Complex & Complex::operator+=(Complex &b) {
     *this = *this + b;
     return *this;
 }
@@ -92,7 +92,24 @@ bool Complex::operator!=(const Complex &rhs) const {
     return !(rhs == *this);
 }
 
-//equals operator: checks real and imaginary parts to see if they're equal
-/*bool Complex::operator==(Complex& other) {
-    return other.real == real && other.imaginary == imaginary;
-}*/
+bool Complex::operator==(const std::complex<double> &rhs) const {
+    if(re == real(rhs) && im == imag(rhs)) return true;
+
+    double realDif = re-real(rhs), imagDif = im-imag(rhs);
+//    cout << realDif << " " << imagDif << endl;
+    if((realDif>-1e-4 && realDif<1e-4) && (imagDif>-1e-5 && imagDif<1e-5)) {
+        return true;
+    }
+    //cerr << "false" << endl;
+
+    //Don't ask.
+    string stringRe = to_string(re);
+    string stringIm = to_string(im);
+    string stdStringRe = to_string(real(rhs));
+    string stdStringIm = to_string(imag(rhs));
+    if(stringRe == stdStringRe && stringIm == stdStringIm) return true;
+}
+
+bool Complex::operator!=(const std::complex<double> &rhs) const {
+    return ! (*this == rhs);
+}

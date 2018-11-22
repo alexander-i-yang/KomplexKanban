@@ -1,4 +1,5 @@
-#include <math.h>
+#include <cmath>
+#include <complex>
 #include "complex.h"
 
 #define PI 3.1415926538979323846

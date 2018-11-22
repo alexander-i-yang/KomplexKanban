@@ -93,7 +93,7 @@ private:
         * @return The "this" pointer
         * @author Alex Yang
         */
-        Complex operator= (Complex b);
+        Complex& operator= (Complex b);
 
         /**
          * Adds the real part of a to the real part of b. Same for the imaginary part.
@@ -101,7 +101,7 @@ private:
          * @return The "this" pointer
          * @author Alex Yang
          */
-        Complex operator+= (Complex& b);
+        Complex & operator+=(Complex &b);
 
         /**
          * Subtracts the real part of b from the real part of b. Same for the imaginary part.
@@ -127,11 +127,38 @@ private:
          */
         Complex operator/=(Complex b);
 
+        /**
+         * Tests whether this complex number is equal to another complex number by comparing their real and imaginary
+         * @param rhs The other complex number
+         * @return Whether this complex number is equal to the other one
+         * @author Alex Yang
+         */
         bool operator==(const Complex &rhs) const;
 
+        /**
+         * Tests whether this complex number is unequal to another complex number by comparing their real and imaginary
+         * @param rhs The other complex number
+         * @return Whether this complex number is unequal to the other one
+         * @author Alex Yang
+         */
         bool operator!=(const Complex &rhs) const;
-        //equals operator: checks real and imaginary parts to see if they're equal
-            //bool operator==(Complex& me);
+
+        /**
+         * FOR TESTING PURPOSES ONLY. Tests whether this Complex number is equal to the standard Complex number
+         * @param rhs A standard complex number to test to this one
+         * @return Whether this complex number is equal to the standard one
+         * @author Alex Yang
+         */
+        bool operator==(const std::complex<double> &rhs) const;
+
+        /**
+         * FOR TESTING PURPOSES ONLY. Tests whether this Complex number is unequal to the standard Complex number
+         * @param rhs A standard complex number to test to this one
+         * @return Whether this complex number is unequal to the standard one
+         * @author Alex Yang
+         */
+        bool operator!=(const std::complex<double> &rhs) const;
+
 };
 
 #endif //KOMPLEXKANBAN_TEST1_H

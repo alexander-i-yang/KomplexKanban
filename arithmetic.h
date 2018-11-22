@@ -61,7 +61,6 @@ Complex polar(double mag, double ang=0.0);
  */
 double real(const Complex& com);
 
-
 /**
  * Returns the log of com in the format ln(abs(com))+i*arg(com).
  * @param com The complex number to find the natural log of.
