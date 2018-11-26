@@ -18,7 +18,7 @@ void error(string functionName, double comp, double stdComp);
 
 void error(string functionName, Complex comp, Complex stdComp);
 
-double random();
+double randomDouble();
 
 int main() {
     Complex comp(-87.5498, -89.3847);
@@ -29,11 +29,11 @@ int main() {
 
     //Test all the functions 100 times with random numbers
     for(int i = 0; i<100; ++i) {
-        double re = random(); //Get very random numbers
-        double im = random();
-        double re2 = random();
-        double im2 = random();
-        double rand = abs(random());
+        double re = randomDouble(); //Get very random numbers
+        double im = randomDouble();
+        double re2 = randomDouble();
+        double im2 = randomDouble();
+        double rand = abs(randomDouble());
 
         Complex compTest(re, im); //Declare custom and standard complex numbers from the random numbers
         Complex compTest2(re2, im2);
@@ -125,6 +125,6 @@ void error(string functionName, Complex comp, Complex stdComp) {
     cerr << "Error: " << functionName << " not working. " << comp << " " << stdComp;
 }
 
-double random() {
+double randomDouble() {
     return (rand()%100+rand()/10000.0)*(rand()%2 == 0 ? -1 : 1);
 }
