@@ -1,4 +1,5 @@
 #include <complex>
+#include "complex.h"
 #include "arithmetic.h"
 
 Complex::Complex() {Complex(0.0, 0.0);}
@@ -108,6 +109,7 @@ bool Complex::operator==(const std::complex<double> &rhs) const {
     string stdStringRe = to_string(real(rhs));
     string stdStringIm = to_string(imag(rhs));
     if(stringRe == stdStringRe && stringIm == stdStringIm) return true;
+    return false;
 }
 
 bool Complex::operator!=(const std::complex<double> &rhs) const {

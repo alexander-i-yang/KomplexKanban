@@ -2,8 +2,8 @@
 #ifndef KOMPLEXKANBAN_ARITHMETIC_H
 #define KOMPLEXKANBAN_ARITHMETIC_H
 
-#include <complex>
 #include "arithmetic.h"
+#include <complex>
 #include "complex.h"
 
 /**

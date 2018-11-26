@@ -5,6 +5,8 @@
 #define KOMPLEXKANBAN_TEST1_H
 
 #include <iostream>
+#include <complex>
+#include "complex.h"
 using namespace std;
 
 class Complex {

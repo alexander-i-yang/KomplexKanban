@@ -36,7 +36,7 @@ double norm(const Complex com) {
     return re*re+im*im;
 }
 
-Complex polar(double mag, double ang=0.0) {
+Complex polar(double mag, double ang) {
     double re = mag*cos(ang);
     double im = mag*sin(ang);
     //Sometimes re becomes 10e-10 instead of 0

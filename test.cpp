@@ -3,6 +3,9 @@
 #include <complex>
 #include <time.h>
 #include "arithmetic.h"
+#include "complex.h"
+#include "complex.cpp"
+#include "arithmetic.cpp"
 
 #define PI 3.1415926538979323846
 
@@ -101,28 +104,28 @@ int main() {
         if(log(compTest) != log(stdCompTest)) error("log", compTest, stdCompTest);
         if(log10(compTest) != log10(stdCompTest)) error("log", compTest, stdCompTest);
     }
-    
+
     return 0;
 }
 
 void error(string functionName, double comp, std::complex<double> stdComp) {
-    cerr << "Error: " << functionName << " not working. " << comp << " " << stdComp;
+    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, Complex comp, std::complex<double> stdComp) {
-    cerr << "Error: " << functionName << " not working. " << comp << " " << stdComp;
+    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, Complex comp, double stdComp) {
-    cerr << "Error: " << functionName << " not working. " << comp << " " << stdComp;
+    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, double comp, double stdComp) {
-    cerr << "Error: " << functionName << " not working. " << comp << " " << stdComp;
+    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, Complex comp, Complex stdComp) {
-    cerr << "Error: " << functionName << " not working. " << comp << " " << stdComp;
+    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 double randomDouble() {
