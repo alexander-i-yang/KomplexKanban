@@ -28,7 +28,7 @@ int main() {
     Complex comp1(5.1221, -6.2363);
 
     cout << "Custom 1\t\t| Custom 2\t\t| Standard 1 \t\t| Standard 2" << endl;
-    cout << "------------------------------------------------------------------------------------" << endl;
+    cout << "----------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 
     //Test all the functions 100 times with random numbers
     for(int i = 0; i<100; ++i) {
@@ -43,7 +43,7 @@ int main() {
         std::complex<double> stdCompTest(re, im);
         std::complex<double> stdCompTest2(re2, im2);
 
-        cout << compTest << "\t| " << compTest2 << "\t| " << stdCompTest << "\t| " << stdCompTest2 << endl;
+        cout << compTest << "\t| " << compTest2 << "\t| " << stdCompTest << "\t| " << stdCompTest2 << "\t|" << endl;
 
         //Test the constructor
         if(compTest != stdCompTest) cerr << "Comptest not equal to stdComp Test" << compTest << " " << stdCompTest << endl;
@@ -103,29 +103,30 @@ int main() {
         //Test the logarithmic functions
         if(log(compTest) != log(stdCompTest)) error("log", compTest, stdCompTest);
         if(log10(compTest) != log10(stdCompTest)) error("log", compTest, stdCompTest);
+        cout << "----------------------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
     }
 
     return 0;
 }
 
 void error(string functionName, double comp, std::complex<double> stdComp) {
-    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t| Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, Complex comp, std::complex<double> stdComp) {
-    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t| Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, Complex comp, double stdComp) {
-    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t| Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, double comp, double stdComp) {
-    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t| Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 void error(string functionName, Complex comp, Complex stdComp) {
-    cout << "Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t| Error: " << functionName << " not working. " << comp << " " << stdComp << endl;
 }
 
 double randomDouble() {
