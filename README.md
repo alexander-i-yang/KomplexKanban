@@ -40,19 +40,19 @@ How to link the static library using g++ commands:
    Don't worry if the weird ".idea", "cmake-build-debug", and "CmakeLists.txt" things don't show up.
 3. Link both the files into a library.
    
-       C:\Users\Alex\CLionProjects\KomplexKanbanGit>ar rsv ComplexLib.a Complex.o ComplexAlex.o
+       C:\Users\Alex\CLionProjects\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o
    This should output something like:
    
-       C:\Users\Alex\CLionProjects\KomplexKanbanGit>ar rsv ComplexLib.a Complex.o ComplexAlex.o
+       C:\Users\Alex\CLionProjects\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o
        a - Complex.o
        a - ComplexAlex.o
 4. Compile the main runner program. (The "161114_ComplexRunner.cpp" one.)
    
-       C:\Users\Alex\CLionProjects\KomplexKanbanGit>g++ 161114_ComplexRunner.cpp ComplexLib.a
+       C:\Users\Alex\CLionProjects\KomplexKanban>g++ 161114_ComplexRunner.cpp ComplexLib.a
    This won't output anything. If it does, it will be angry errors. This means you are doing it wrong.
 5. Run the program.
    
-       C:\Users\Alex\CLionProjects\KomplexKanbanGit>a
+       C:\Users\Alex\CLionProjects\KomplexKanban>a
    If it gives you something like
        
        'a' is not recognized as an internal or external command,
