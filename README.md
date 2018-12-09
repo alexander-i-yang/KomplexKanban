@@ -47,7 +47,6 @@ How to link the static library using g++ commands:
    This should output something like:
    
    ```
-   C:\Users\Alex\CLionProjects\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o
    a - Complex.o
    a - ComplexAlex.o
    ```
