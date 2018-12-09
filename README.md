@@ -99,4 +99,4 @@ How to link the static library using g++ commands:
    The sin is: (10.4725, -73.4606)
    ```
    
-   If you don't, quietly weep until Mr. Shockey sees you and gives you and beg him to give you a hundred.
+   If you don't, quietly weep until Mr. Shockey sees you. Then, beg him to give you a hundred.
