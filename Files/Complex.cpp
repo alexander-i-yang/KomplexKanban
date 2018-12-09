@@ -1,6 +1,4 @@
-#include <complex>
-#include "complex.h"
-#include "arithmetic.h"
+#include "Complex.h"
 
 Complex::Complex() {Complex(0.0, 0.0);}
 
@@ -40,13 +38,27 @@ Complex Complex::operator+(Complex b) {
     return ret;
 }
 
+Complex Complex::operator+(int a) {
+    Complex ret(re+a, im);
+    return ret;
+}
+
 Complex Complex::operator-(Complex b) {
     Complex ret(re-b.re, im-b.im);
     return ret;
 }
 
+Complex Complex::operator-(int a) {
+    return *this+(-1*a);
+}
+
 Complex Complex::operator*(Complex b) {
     Complex ret(re*b.re-im*b.im, im*b.re+b.im*re);
+    return ret;
+}
+
+Complex Complex::operator*(int a) {
+    Complex ret(re*a, im*a);
     return ret;
 }
 
@@ -93,25 +105,12 @@ bool Complex::operator!=(const Complex &rhs) const {
     return !(rhs == *this);
 }
 
-bool Complex::operator==(const std::complex<double> &rhs) const {
-    if(re == real(rhs) && im == imag(rhs)) return true;
-
-    double realDif = re-real(rhs), imagDif = im-imag(rhs);
-//    cout << realDif << " " << imagDif << endl;
-    if((realDif>-1e-4 && realDif<1e-4) && (imagDif>-1e-5 && imagDif<1e-5)) {
-        return true;
-    }
-    //cerr << "false" << endl;
-
-    //Don't ask.
-    string stringRe = to_string(re);
-    string stringIm = to_string(im);
-    string stdStringRe = to_string(real(rhs));
-    string stdStringIm = to_string(imag(rhs));
-    if(stringRe == stdStringRe && stringIm == stdStringIm) return true;
-    return false;
+Complex operator*(int a, const Complex &com) {
+    Complex ret(a*real(com), a*imag(com));
+    return ret;
 }
 
-bool Complex::operator!=(const std::complex<double> &rhs) const {
-    return ! (*this == rhs);
+Complex operator+(int a, const Complex &com) {
+    Complex ret(a+real(com), imag(com));
+    return ret;
 }

@@ -1,6 +1,5 @@
 #include <cmath>
-#include <complex>
-#include "complex.h"
+#include "Complex.h"
 
 #define PI 3.1415926538979323846
 #define EULER 2.71828182845904523536
@@ -196,4 +195,8 @@ Complex atan(Complex& com) {
     Complex onePlusITimesCom(1+real(i*com), imag(i*com));
     Complex ret = oneHalfI*log(oneMinusITimesCom)-oneHalfI*log(onePlusITimesCom);
     return ret;
+}
+
+Complex exp(Complex &com) {
+    return pow(EULER, com);
 }
