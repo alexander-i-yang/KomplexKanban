@@ -76,14 +76,17 @@ How to link the static library using g++ commands:
    Enter b:
    ```
    
-   Type in a complex number with the format "a+bi" where a and b are doubles. If you type in 3+2i, you should get something *exactly* like this:
+   Type in a complex number with the format "(a, b)" where a and b are doubles. If you type in "(3, 2)", you should get something *exactly* like this:
    
    ```
+   Hello World
+   Enter b:(3, 2)
+    (3, 2)
    a = (5, 6)
-   b = (3, 3)
-   a + b = (8, 9)
-   a * b = (-3, 33)
-   a / b = (1.83333, 0.166667)
+   b = (3, 2)
+   a + b = (8, 8)
+   a * b = (3, 28)
+   a / b = (2.07692, 0.615385)
    |a| = 7.81025
    complex conjugate of a = (5, -6)
    norm of a = 61
@@ -97,6 +100,8 @@ How to link the static library using g++ commands:
    The sqrt is: (2.1013, 1.18974)
    The natural log is: (1.76318, 1.03038)
    The sin is: (10.4725, -73.4606)
+   
+   Process finished with exit code 0
    ```
    
    If you don't, quietly weep until Mr. Shockey sees you. Then, beg him to give you a hundred.
