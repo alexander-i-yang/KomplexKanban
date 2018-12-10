@@ -11,37 +11,37 @@ How to link the static library using g++ commands:
 
 1. cd into the directory with all the files.
 2. Compile the Complex.h header file.
-   
+
    ```C:\KomplexKanban>g++ Complex.h```
-   
+
    This shouldn't output anything. If it does, it will be angry errors.
 
 3. Create the .o files in the directory.
 
-   ```C:\KomplexKanban>g++ -c Complex.cpp ComplexAlex.cpp ComplexSamuel.cpp```
-   
+   ```C:\KomplexKanban>g++ -c Complex.cpp ComplexAlex.cpp ComplexSamuel.cpp ComplexYash.cpp```
+
 4. Link both the files into a library.
-   
-   ```C:\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o ComplexSamuel.o```
-   
+
+   ```C:\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o ComplexSamuel.o ComplexYash.o```
+
 5. Compile the main runner program. (The "161114_ComplexRunner.cpp" one.)
-   
+
    ```C:\KomplexKanban>g++ -o run 161114_ComplexRunner.cpp ComplexLib.a```
-   
+
    This won't output anything. If it does, it will be angry errors. This means you are doing it wrong.
 6. Run the program.
 
    ```C:\KomplexKanban>run```
-   
+
    When your run the program, it should give you something like
-   
+
    ```
    Hello World
    Enter b:
    ```
-   
+
    Type in a complex number with the format "(a, b)" where a and b are doubles. If you type in "(3, 2)", you should get something *exactly* like this:
-   
+
    ```
    Hello World
    Enter b:(3, 2)
@@ -64,8 +64,8 @@ How to link the static library using g++ commands:
    The sqrt is: (2.1013, 1.18974)
    The natural log is: (1.76318, 1.03038)
    The sin is: (10.4725, -73.4606)
-   
+
    Process finished with exit code 0
    ```
-   
+
    If you don't, quietly weep until Mr. Shockey sees you. Then, beg him to give you a hundred.

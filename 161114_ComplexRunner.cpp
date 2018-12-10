@@ -38,7 +38,6 @@ int main () {
     cout << "The sin is: " << sin(z1) << endl;
 
     /* other function testing */
-    // cout << "The acosh is: " << acosh(z1) << endl;q
-    // cout << "Rounded to 2 decimal places: " << acosh(z1).rnd(2) << endl;
-    // cout << "The atanh is: " << atanh(a) << endl;
+    cout << "The acosh is: " << acosh(z1) << endl;
+    cout << "The atanh is: " << atanh(a) << endl;
 }

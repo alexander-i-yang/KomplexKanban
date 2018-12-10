@@ -113,7 +113,7 @@ class Complex {
      * @param ang The angle of the resulting complex number IN RADIANS
      * @return The complex number formed by mag and ang
      */
-    friend Complex polar(double mag, double ang=0.0);
+    friend Complex polar(double mag, double ang);
 
     /**
      * Returns the real part of the parameter
@@ -278,6 +278,14 @@ class Complex {
      * @author Samuel Tian
      */
     friend Complex atanh(Complex& com);
+
+    /**
+     * Returns the inverse hyperbolic cosine of the argument
+     * @param com The complex number to find the inverse hyperbolic cosine of
+     * @return A complex number that is the inverse hyperbolic cosine of com
+     * @author Yash Patil
+     */
+    friend Complex acosh(Complex& com);
 
 private:
     ///Real part
