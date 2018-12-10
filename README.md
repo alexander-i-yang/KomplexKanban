@@ -10,20 +10,26 @@ Pistachio Inc.'s Komplex Kanban project. Any trespassers will be lectured.
 How to link the static library using g++ commands:
 
 1. cd into the directory with all the files.
-2. Create the .o files in the directory.
+2. Compile the Complex.h header file.
+   
+   ```C:\KomplexKanban>g++ Complex.h```
+   
+   This shouldn't output anything. If it does, it will be angry errors.
+
+3. Create the .o files in the directory.
 
    ```C:\KomplexKanban>g++ -c Complex.cpp ComplexAlex.cpp ComplexSamuel.cpp```
    
-3. Link both the files into a library.
+4. Link both the files into a library.
    
    ```C:\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o ComplexSamuel.o```
    
-4. Compile the main runner program. (The "161114_ComplexRunner.cpp" one.)
+5. Compile the main runner program. (The "161114_ComplexRunner.cpp" one.)
    
    ```C:\KomplexKanban>g++ -o run 161114_ComplexRunner.cpp ComplexLib.a```
    
    This won't output anything. If it does, it will be angry errors. This means you are doing it wrong.
-5. Run the program.
+6. Run the program.
 
    ```C:\KomplexKanban>run```
    
