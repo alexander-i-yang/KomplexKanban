@@ -113,7 +113,7 @@ class Complex {
      * @param ang The angle of the resulting complex number IN RADIANS, defaults to 0.0
      * @return The complex number formed by mag and ang
      */
-    friend Complex polar(double mag, double ang=0.0);
+    friend Complex polar(double mag, double ang);
 
     /**
      * Returns the real part of the parameter
@@ -197,7 +197,7 @@ class Complex {
      * @param com The complex number to find the square root of
      * @return The square root of com
      */
-    friend Complex sqrt(Complex& com);
+    friend Complex sqrt(Complex com);
 
     /**
      * Returns the sine of the argument in the form sin(a)*cosh(b)+i*cos(a)*sinh(b). Math, right?
@@ -323,10 +323,10 @@ public:
     Complex operator+(Complex b);
 
     /**
-     * Operator overload for adding integers and complex numbers (format com+a)
-     * @param a The integer to add
+     * Operator overload for adding doubles and complex numbers (format com+a)
+     * @param a The double to add
      * @return com+a
-     * @author Alex Yang
+     * @author Samuel Tian
      */
     Complex operator+(double a);
 

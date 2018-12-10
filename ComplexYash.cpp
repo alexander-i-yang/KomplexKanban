@@ -5,6 +5,7 @@
 #define EULER 2.71828182845904523536
 
 Complex acosh(Complex& com) {
-	Complex ret = log(com + sqrt(com + 1) * sqrt(com - 1));
+	sqrt(com);
+	Complex ret = log(com + sqrt(com+1) * sqrt(com - 1));
 	return ret;
 }

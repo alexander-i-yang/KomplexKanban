@@ -94,7 +94,7 @@ Complex root(Complex& com, int exp) {
     return ret;
 }
 
-Complex sqrt(Complex& com) {
+Complex sqrt(Complex com) {
     return root(com, 2);
 }
 

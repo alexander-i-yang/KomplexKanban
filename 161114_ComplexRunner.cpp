@@ -5,10 +5,10 @@
 int main () {
     std::cout << "Hello World" << std::endl;
 
-    Complex a(5.0,6.0),b;
+    Complex a(5.0,6.0),b(1.0,1.0);
 
-    std::cout << "Enter b: ";
-    std::cin >> b;
+    /*std::cout << "Enter b: ";
+    std::cin >> b;*/
 
     std::cout << "a = " << a << "\n";
     std::cout << "b = " << b << "\n";
@@ -38,6 +38,7 @@ int main () {
     cout << "The sin is: " << sin(z1) << endl;
 
     /* other function testing */
-    cout << "The acosh is: " << acosh(z1) << endl;
-    cout << "The atanh is: " << atanh(a) << endl;
+    // cout << "The acosh is: " << acosh(z1) << endl;q
+    // cout << "Rounded to 2 decimal places: " << acosh(z1).rnd(2) << endl;
+    // cout << "The atanh is: " << atanh(a) << endl;
 }
