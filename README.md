@@ -40,12 +40,12 @@ How to link the static library using g++ commands:
    Enter b:
    ```
 
-   Type in a complex number with the format "(a, b)" where a and b are doubles. If you type in "(3, 2)", you should get something *exactly* like this:
+   Type in a complex number with the format "(a, b)" where a and b are doubles. If you type in "(3,2)", you should get something *exactly* like this:
 
    ```
    Hello World
-   Enter b:(3, 2)
-    (3, 2)
+   Enter b:(3,2)
+    (3,2)
    a = (5, 6)
    b = (3, 2)
    a + b = (8, 8)
@@ -64,7 +64,13 @@ How to link the static library using g++ commands:
    The sqrt is: (2.1013, 1.18974)
    The natural log is: (1.76318, 1.03038)
    The sin is: (10.4725, -73.4606)
-
+   The acosh is: (2.45983, 1.0368)
+   The asec is: (1.4834, 0.147091)
+   The acot is: (0.0899267, -0.146947)
+   The acsc is: (0.0874005, -0.147091)
+   The acoth is: (0.0899228, -0.146956)
+   The atanh is: (0.0813556, 1.4721)
+   
    Process finished with exit code 0
    ```
 
