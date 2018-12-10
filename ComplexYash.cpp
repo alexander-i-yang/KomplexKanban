@@ -5,7 +5,21 @@
 #define EULER 2.71828182845904523536
 
 Complex acosh(Complex& com) {
-	sqrt(com);
-	Complex ret = log(com + sqrt(com+1) * sqrt(com - 1));
+	Complex ret = log(com + sqrt(com + 1) * sqrt(com - 1));
+	return ret;
+}
+
+Complex asec(Complex& com) {
+	Complex ret = 0.5 * (PI - 2 * asin(1/com));
+	return ret;
+}
+
+Complex acot(Complex& com) {
+	Complex ret = atan(1/com);
+	return ret;
+}
+
+Complex acsc(Complex& com) {
+	Complex ret = asin(1/com);
 	return ret;
 }

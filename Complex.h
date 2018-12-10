@@ -287,6 +287,30 @@ class Complex {
      */
     friend Complex acosh(Complex& com);
 
+    /**
+     * Returns the inverse secant of the argument
+     * @param com The complex number to find the inverse secant of
+     * @return A complex number that is the inverse secant of com
+     * @author Yash Patil
+     */
+    friend Complex asec(Complex& com);
+
+    /**
+     * Returns the inverse cotan of the argument
+     * @param com The complex number to find the inverse cotan of
+     * @return A complex number that is the inverse cotan of com
+     * @author Yash Patil
+     */
+    friend Complex acot(Complex& com);
+
+    /**
+     * Returns the inverse cotan of the argument
+     * @param com The complex number to find the inverse cotan of
+     * @return A complex number that is the inverse cotan of com
+     * @author Yash Patil
+     */
+    friend Complex acsc(Complex& com);
+
 private:
     ///Real part
     double re;
