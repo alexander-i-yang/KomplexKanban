@@ -5,10 +5,10 @@
 int main () {
     std::cout << "Hello World" << std::endl;
 
-    Complex a(5.0,6.0),b(1.0,1.0);
+    Complex a(5.0,6.0),b;
 
-    /*std::cout << "Enter b: ";
-    std::cin >> b;*/
+    std::cout << "Enter b: ";
+    std::cin >> b;
 
     std::cout << "a = " << a << "\n";
     std::cout << "b = " << b << "\n";
