@@ -12,11 +12,11 @@ How to link the static library using g++ commands:
 1. cd into the directory with all the files.
 2. Create the .o files in the directory.
 
-   ```C:\Users\Alex\CLionProjects\KomplexKanban>g++ -c Complex.cpp ComplexAlex.cpp```
+   ```C:\KomplexKanban>g++ -c Complex.cpp ComplexAlex.cpp```
    
    Verify that the .o files have been created:
 
-   ```C:\Users\Alex\CLionProjects\KomplexKanban>dir```
+   ```C:\KomplexKanban>dir```
    
    should get you something like:
    
@@ -42,7 +42,7 @@ How to link the static library using g++ commands:
    Don't worry if the weird ".idea", "cmake-build-debug", and "CmakeLists.txt" things don't show up.
 3. Link both the files into a library.
    
-   ```C:\Users\Alex\CLionProjects\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o```
+   ```C:\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o```
    
    This should output something like:
    
@@ -52,17 +52,17 @@ How to link the static library using g++ commands:
    ```
 4. Compile the main runner program. (The "161114_ComplexRunner.cpp" one.)
    
-   ```C:\Users\Alex\CLionProjects\KomplexKanban>g++ 161114_ComplexRunner.cpp ComplexLib.a```
+   ```C:\KomplexKanban>g++ -o run 161114_ComplexRunner.cpp ComplexLib.a```
    
    This won't output anything. If it does, it will be angry errors. This means you are doing it wrong.
 5. Run the program.
-   
-   ```C:\Users\Alex\CLionProjects\KomplexKanban>a```
+
+   ```C:\KomplexKanban>run```
    
    If it gives you something like
    
    ```
-   'a' is not recognized as an internal or external command,
+   'run' is not recognized as an internal or external command,
    operable program or batch file.
    ```
    
