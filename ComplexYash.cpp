@@ -23,3 +23,13 @@ Complex acsc(Complex& com) {
 	Complex ret = asin(pow(com, -1));
 	return ret;
 }
+
+Complex asech(Complex& com) {
+	Complex ret = cosh(pow(com, -1));
+	return ret;
+}
+
+Complex acoth(Complex& com) {
+	Complex ret = tanh(pow(com, -1));
+	return ret;
+}

@@ -311,6 +311,22 @@ class Complex {
      */
     friend Complex acsc(Complex& com);
 
+    /**
+     * Returns the inverse hyperbolic secant of the argument
+     * @param com The complex number to find the inverse hyperbolic secant of
+     * @return A complex number that is the inverse hyperbolic secant of com
+     * @author Yash Patil
+     */
+    friend Complex asech(Complex& com);
+
+    /**
+     * Returns the inverse hyperbolic cotan of the argument
+     * @param com The complex number to find the inverse hyperbolic cotan of
+     * @return A complex number that is the inverse hyperbolic cotan of com
+     * @author Yash Patil
+     */
+    friend Complex acoth(Complex& com);
+
 private:
     ///Real part
     double re;

@@ -39,9 +39,11 @@ int main () {
 
     /* other function testing */
     cout << "The acosh is: " << acosh(z1) << endl;
-    cout << "The acosh is: " << asec(z1) << endl;
-    cout << "The acosh is: " << acot(z1) << endl;
-    cout << "The acosh is: " << acsc(z1) << endl;
+    cout << "The asec is: " << asec(z1) << endl;
+    cout << "The acot is: " << acot(z1) << endl;
+    cout << "The acsc is: " << acsc(z1) << endl;
+    cout << "The asech is: " << asech(z1) << endl;
+    cout << "The acoth is: " << acoth(z1) << endl;
     // cout << "Rounded to 2 decimal places: " << acosh(z1).rnd(2) << endl;
     cout << "The atanh is: " << atanh(a) << endl;
 }
