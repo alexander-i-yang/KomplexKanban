@@ -320,6 +320,14 @@ class Complex {
     friend Complex asech(Complex& com);
 
     /**
+     * Returns the inverse hyperbolic acosecant of the argument
+     * @param com The complex number to find the inverse hyperbolic cosecant of
+     * @return A complex number that is the inverse hyperbolic cosecant of com
+     * @author Samuel Tian
+     */
+    friend Complex acsch(Complex& com);
+
+    /**
      * Returns the inverse hyperbolic cotan of the argument
      * @param com The complex number to find the inverse hyperbolic cotan of
      * @return A complex number that is the inverse hyperbolic cotan of com
