@@ -10,7 +10,7 @@ Complex acosh(Complex& com) {
 }
 
 Complex asec(Complex& com) {
-	Complex ret = 0.5 * (PI - 2 * asin(1/com));
+	Complex ret = 0.5 * (PI - 2 * asin(pow(com, -1)));
 	return ret;
 }
 
