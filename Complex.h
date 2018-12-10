@@ -110,10 +110,10 @@ class Complex {
     /**
      * Creates a complex number with magnitude mag and angle ang (IN RADIANS)
      * @param mag The magnitude of the resulting complex number
-     * @param ang The angle of the resulting complex number IN RADIANS
+     * @param ang The angle of the resulting complex number IN RADIANS, defaults to 0.0
      * @return The complex number formed by mag and ang
      */
-    friend Complex polar(double mag, double ang);
+    friend Complex polar(double mag, double ang=0.0);
 
     /**
      * Returns the real part of the parameter
