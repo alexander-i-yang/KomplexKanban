@@ -15,11 +15,11 @@ Complex asec(Complex& com) {
 }
 
 Complex acot(Complex& com) {
-	Complex ret = atan(1/com);
+	Complex ret = atan(pow(com, -1));
 	return ret;
 }
 
 Complex acsc(Complex& com) {
-	Complex ret = asin(1/com);
+	Complex ret = asin(pow(com, -1));
 	return ret;
 }
