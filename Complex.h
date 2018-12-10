@@ -30,22 +30,31 @@ class Complex {
     friend double imag(const Complex &the);
 
     /**
-     * Operator overload for multiplying integers and complex numbers
-     * @param a The integer
+     * Operator overload for multiplying doubles and complex numbers
+     * @param a The double
      * @param com The complex number to add
      * @return a*com
      * @author Alex Yang
      */
-    friend Complex operator*(int a, const Complex &com);
+    friend Complex operator*(double a, const Complex &com);
 
     /**
-     * Operator overload for adding integers and complex numbers
-     * @param a The integer
+     * Operator overload for adding doubles and complex numbers
+     * @param a The double
      * @param com The complex number to add
      * @return a+com
      * @author Alex Yang
      */
-    friend Complex operator+(int a, const Complex &com);
+    friend Complex operator+(double a, const Complex &com);
+
+    /**
+     * Operator overload for subtracting doubles and complex numbers
+     * @param a The double
+     * @param com The complex number to subtract
+     * @return a-com
+     * @author Samuel Tian
+     */
+    friend Complex operator-(double a, const Complex &com);
 
     /**
      * Format: (real, imaginary). Does not include "i".
@@ -261,6 +270,15 @@ class Complex {
      * @author Alex Yang
      */
     friend Complex atan(Complex& com);
+
+    /**
+     * Returns the inverse hyperbolic tangent of the argument
+     * @param com The complex number to find the inverse hyperbolic tangent of
+     * @return A complex number that is the inverse hyperbolic tangent of com
+     * @author Samuel Tian
+     */
+    friend Complex atanh(Complex& com);
+
 private:
     ///Real part
     double re;
@@ -302,7 +320,7 @@ public:
      * @return com+a
      * @author Alex Yang
      */
-    Complex operator+(int a);
+    Complex operator+(double a);
 
     /**
      * Subtracts real and imaginary parts of this complex number and b
@@ -318,7 +336,7 @@ public:
      * @return com-a
      * @author Alex Yang
      */
-    Complex operator-(int a);
+    Complex operator-(double a);
 
     /**
      * Multiplies this complex number and b. Results in (ab-cd)+(ac+bd)i.
@@ -334,7 +352,7 @@ public:
      * @return com*a
      * @author Alex Yang
      */
-    Complex operator*(int a);
+    Complex operator*(double a);
 
     /**
      * Multiplies this complex number and b. Results in (ab-cd)+(ac+bd)i.

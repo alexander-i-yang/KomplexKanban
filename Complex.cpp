@@ -37,8 +37,13 @@ Complex Complex::operator+(Complex b) {
     return ret;
 }
 
-Complex Complex::operator+(int a) {
+Complex Complex::operator+(double a) {
     Complex ret(re+a, im);
+    return ret;
+}
+
+Complex operator+(double a, const Complex &com) {
+    Complex ret(a+real(com), imag(com));
     return ret;
 }
 
@@ -47,8 +52,13 @@ Complex Complex::operator-(Complex b) {
     return ret;
 }
 
-Complex Complex::operator-(int a) {
+Complex Complex::operator-(double a) {
     return *this+(-1*a);
+}
+
+Complex operator-(double a, const Complex &com) {
+	Complex ret(a-real(com), -1*imag(com));
+	return ret;
 }
 
 Complex Complex::operator*(Complex b) {
@@ -56,8 +66,13 @@ Complex Complex::operator*(Complex b) {
     return ret;
 }
 
-Complex Complex::operator*(int a) {
+Complex Complex::operator*(double a) {
     Complex ret(re*a, im*a);
+    return ret;
+}
+
+Complex operator*(double a, const Complex &com) {
+    Complex ret(a*real(com), a*imag(com));
     return ret;
 }
 
@@ -102,14 +117,4 @@ bool Complex::operator==(const Complex &rhs) const {
 
 bool Complex::operator!=(const Complex &rhs) const {
     return !(rhs == *this);
-}
-
-Complex operator*(int a, const Complex &com) {
-    Complex ret(a*real(com), a*imag(com));
-    return ret;
-}
-
-Complex operator+(int a, const Complex &com) {
-    Complex ret(a+real(com), imag(com));
-    return ret;
 }
