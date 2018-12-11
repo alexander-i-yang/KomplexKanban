@@ -28,3 +28,8 @@ Complex acoth(Complex com) {
 	Complex ret = tanh(pow(com, -1));
 	return ret;
 }
+
+Complex asech(Complex com) {
+    Complex ret = acosh(1/com);
+    return ret;
+}
