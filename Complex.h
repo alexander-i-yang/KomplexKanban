@@ -20,14 +20,14 @@ class Complex {
      * @return com.re
      * @author Alex Yang
      */
-    friend double real(const Complex &com);
+    friend double real(const Complex com);
     /**
      * Returns the imaginary part of com
      * @param com The complex number to find the real part of
      * @return com.im
      * @author Alex Yang
      */
-    friend double imag(const Complex &the);
+    friend double imag(const Complex the);
 
     /**
      * Operator overload for multiplying doubles and complex numbers
@@ -57,6 +57,15 @@ class Complex {
     friend Complex operator-(double a, const Complex &com);
 
     /**
+     * Operator overload for dividing doubles and complex numbers
+     * @param a The double
+     * @param com The complex number to divide
+     * @return a/com
+     * @author Max Weinreb
+     */
+    friend Complex operator/(double a, const Complex &com);
+
+    /**
      * Format: (real, imaginary). Does not include "i".
      * @param out ostream
      * @param me complex number to print
@@ -64,6 +73,7 @@ class Complex {
      * @author Alex Yang
      */
     friend ostream& operator<<(ostream& out, const Complex& me);
+
     /**
      * Reads in a pair of values in parentheses, separated by a comma and a space (optional). Defaults to (0, 0)
      * @bug The error handling is likely incorrect
@@ -121,7 +131,7 @@ class Complex {
      * @return the real part of com
      * @author Alex Yang
      */
-    friend double real(const Complex& com);
+    friend double real(const Complex com);
 
     /**
      * Returns the log of com in the format ln(abs(com))+i*arg(com).
@@ -137,7 +147,7 @@ class Complex {
      * @return log base 10 of com
      * @author Alex Yang
      */
-    friend Complex log10(Complex& com);
+    friend Complex log10(Complex com);
 
     /**
      * Computes e^com
@@ -145,7 +155,7 @@ class Complex {
      * @return e^com
      * @author Alex Yang
      */
-    friend Complex exp(Complex& com);
+    friend Complex exp(Complex com);
 
     /**
      * Returns a complex number that is com^exp. Solves in the form |com|^exp * (cos(exp*arg(z))+i*sin(exp*arg(z)))
@@ -154,7 +164,7 @@ class Complex {
      * @return com^exp
      * @author Alex Yang
      */
-    friend Complex pow(Complex& b, int exp);
+    friend Complex pow(Complex b, int exp);
 
     /**
      * Raises b to the power of exp
@@ -163,7 +173,7 @@ class Complex {
      * @return b^exp
      * @author Alex Yang
      */
-    friend Complex pow(double b, Complex& exp);
+    friend Complex pow(double b, Complex exp);
 
     /**
      * Returns the 1st of the nth root of com.
@@ -172,7 +182,7 @@ class Complex {
      * @return The first root of the com
      * @author Alex yang
      */
-    friend Complex root(Complex& b, int exp);
+    friend Complex root(Complex b, int exp);
 
     /**
      * Raises b to the power of exp
@@ -181,7 +191,7 @@ class Complex {
      * @return b^exp
      * @author Alex Yang
      */
-    friend Complex pow(Complex& b, double exp);
+    friend Complex pow(Complex b, double exp);
 
     /**
      * Raises com to the power of exp.
@@ -190,7 +200,7 @@ class Complex {
      * @return com^exp
      * @author Alex Yang
      */
-    friend Complex pow(Complex& b, Complex& exp);
+    friend Complex pow(Complex b, Complex exp);
 
     /**
      * Returns the square root of com
@@ -205,7 +215,7 @@ class Complex {
      * @return A complex number that is the sine of com
      * @author Alex Yang
      */
-    friend Complex sin(Complex& com);
+    friend Complex sin(Complex com);
 
     /**
      * Returns the cosine of the argument in the form cos(a)*cosh(b)−i*sin(a)*sinh(b)
@@ -213,7 +223,7 @@ class Complex {
      * @return A complex number that is the cosine of com
      * @author Alex Yang
      */
-    friend Complex cos(Complex& com);
+    friend Complex cos(Complex com);
 
     /**
      * Returns the tangent of the argument in the form (sin(a)*cosh(b)+i*cos(a)*sinh(b))/(cos(a)*cosh(b)−i*sin(a)*sinh(b))
@@ -221,7 +231,7 @@ class Complex {
      * @return A complex number that is the tangent of com
      * @author Alex Yang
      */
-    friend Complex tan(Complex& com);
+    friend Complex tan(Complex com);
 
     /**
      * Returns the hyperbolic sine of the argument in the form sinh(a)*cos(b)+i*cosh(a)*sin(b).
@@ -229,7 +239,7 @@ class Complex {
      * @return A complex number that is the sinh of com
      * @author Alex Yang
      */
-    friend Complex sinh(Complex& com);
+    friend Complex sinh(Complex com);
 
     /**
      * Returns the hyperbolic cosine of the argument in the form cosh(a)*cos(b)+i*sinh(a)*sin(b).
@@ -237,7 +247,7 @@ class Complex {
      * @return A complex number that is the cosh of com
      * @author Alex Yang
      */
-    friend Complex cosh(Complex& com);
+    friend Complex cosh(Complex com);
 
     /**
      * Returns the hyperbolic tangent of the argument in the form (tanh(a)+i*tan(b))/(1+i*tanh(x)*tan(y))
@@ -245,7 +255,7 @@ class Complex {
      * @return A complex number that is the tanh of com
      * @author Alex Yang
      */
-    friend Complex tanh(Complex& com);
+    friend Complex tanh(Complex com);
 
     /**
      * Returns the inverse sine of the argument in the form -i*ln(i*com+(1-com^2)^(1/2))
@@ -253,7 +263,7 @@ class Complex {
      * @return A complex number that is the inverse sin of com
      * @author Alex Yang
      */
-    friend Complex asin(Complex& com);
+    friend Complex asin(Complex com);
 
     /**
      * Returns the inverse cosine of the argument.
@@ -261,7 +271,7 @@ class Complex {
      * @return A complex number that is the inverse cosine of com
      * @author Alex Yang
      */
-    friend Complex acos(Complex& com);
+    friend Complex acos(Complex com);
 
     /**
      * Returns the inverse tangent of the argument
@@ -269,7 +279,7 @@ class Complex {
      * @return A complex number that is the inverse tangent of com
      * @author Alex Yang
      */
-    friend Complex atan(Complex& com);
+    friend Complex atan(Complex com);
 
     /**
      * Returns the inverse hyperbolic tangent of the argument
@@ -277,7 +287,7 @@ class Complex {
      * @return A complex number that is the inverse hyperbolic tangent of com
      * @author Samuel Tian
      */
-    friend Complex atanh(Complex& com);
+    friend Complex atanh(Complex com);
 
     /**
      * Returns the inverse hyperbolic cosine of the argument
@@ -285,7 +295,15 @@ class Complex {
      * @return A complex number that is the inverse hyperbolic cosine of com
      * @author Yash Patil
      */
-    friend Complex acosh(Complex& com);
+    friend Complex acosh(Complex com);
+
+    /**
+     * Returns the inverse hyperbolic sine of the argument
+     * @param com The complex number to find the inverse hyperbolic sine of
+     * @return A complex number that is the inverse hyperbolic sin of com
+     * @author Max Weinreb
+     */
+    friend Complex asinh(Complex com);    
 
     /**
      * Returns the inverse secant of the argument
@@ -293,7 +311,7 @@ class Complex {
      * @return A complex number that is the inverse secant of com
      * @author Yash Patil
      */
-    friend Complex asec(Complex& com);
+    friend Complex asec(Complex com);
 
     /**
      * Returns the inverse cotan of the argument
@@ -301,7 +319,7 @@ class Complex {
      * @return A complex number that is the inverse cotan of com
      * @author Yash Patil
      */
-    friend Complex acot(Complex& com);
+    friend Complex acot(Complex com);
 
     /**
      * Returns the inverse cotan of the argument
@@ -309,7 +327,7 @@ class Complex {
      * @return A complex number that is the inverse cotan of com
      * @author Yash Patil
      */
-    friend Complex acsc(Complex& com);
+    friend Complex acsc(Complex com);
 
     /**
      * Returns the inverse hyperbolic secant of the argument
@@ -317,7 +335,7 @@ class Complex {
      * @return A complex number that is the inverse hyperbolic secant of com
      * @author Yash Patil
      */
-    friend Complex asech(Complex& com);
+    friend Complex asech(Complex com);
 
     /**
      * Returns the inverse hyperbolic acosecant of the argument
@@ -325,7 +343,7 @@ class Complex {
      * @return A complex number that is the inverse hyperbolic cosecant of com
      * @author Samuel Tian
      */
-    friend Complex acsch(Complex& com);
+    friend Complex acsch(Complex com);
 
     /**
      * Returns the inverse hyperbolic cotan of the argument
@@ -333,7 +351,7 @@ class Complex {
      * @return A complex number that is the inverse hyperbolic cotan of com
      * @author Yash Patil
      */
-    friend Complex acoth(Complex& com);
+    friend Complex acoth(Complex com);
 
 private:
     ///Real part
@@ -417,6 +435,14 @@ public:
      * @author Alex Yang
      */
     Complex operator/(Complex& b);
+
+    /**
+     * Operator overload for dividing complex numbers and integers (format com*a)
+     * @param a The integer to divide by
+     * @return com/a
+     * @author Max Weinred
+     */
+    Complex operator/(double a);
 
     /**
     * The real number part of a is set to the real part of b. Same for the imaginary part.

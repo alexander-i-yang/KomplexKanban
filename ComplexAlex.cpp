@@ -26,7 +26,7 @@ Complex conj(const Complex com) {
     return ret;
 }
 
-double imag(const Complex &the) {
+double imag(const Complex the) {
     return the.im;
 }
 
@@ -51,18 +51,18 @@ Complex polar(double mag, double ang=0.0) {
     return ret;
 }
 
-double real(const Complex& com) {
+double real(const Complex com) {
     return com.re;
 }
 
-Complex pow(double b, Complex& com) {
+Complex pow(double b, Complex com) {
     double angle = imag(com)*log(b);
     double mag = pow(b, real(com));
     Complex ret = polar(mag, angle);
     return ret;
 }
 
-Complex pow(Complex& com, double exp) {
+Complex pow(Complex com, double exp) {
     double angle = arg(com);
     double magnitude = abs(com);
     double re = pow(magnitude, exp) * cos(exp*angle);
@@ -71,12 +71,12 @@ Complex pow(Complex& com, double exp) {
     return ret;
 }
 
-Complex pow(Complex& com, int exp) {
+Complex pow(Complex com, int exp) {
     double expD = exp;
     return pow(com, expD);
 }
 
-Complex pow(Complex& com, Complex& exp) {
+Complex pow(Complex com, Complex exp) {
     double expRe = real(exp), expIm = imag(exp);
     double mag = pow(norm(com), 0.5*expRe)*std::exp(-1*expIm*arg(com));
     double angle = expRe*arg(com)+0.5*expIm*log(norm(com));
@@ -85,7 +85,7 @@ Complex pow(Complex& com, Complex& exp) {
 
 }
 
-Complex root(Complex& com, int exp) {
+Complex root(Complex com, int exp) {
     double angle = arg(com);
     double magnitude = abs(com);
     double re = pow(magnitude, 1.0/exp) * cos(angle/exp);
@@ -105,14 +105,14 @@ Complex log(Complex com) {
     return ret;
 }
 
-Complex log10(Complex& com) {
+Complex log10(Complex com) {
     double re = log10(abs(com));
     double im = log10(EULER) * arg(com);
     Complex ret(re, im);
     return ret;
 }
 
-Complex sin(Complex& com) {
+Complex sin(Complex com) {
     //sin(a)*cosh(b)+i*cos(a)*sinh(b). Math, right?
     double comRe = real(com);
     double comIm = imag(com);
@@ -122,7 +122,7 @@ Complex sin(Complex& com) {
     return ret;
 }
 
-Complex cos(Complex& com) {
+Complex cos(Complex com) {
     double comRe = real(com);
     double comIm = imag(com);
     double re = cos(comRe)*cosh(comIm);
@@ -131,7 +131,7 @@ Complex cos(Complex& com) {
     return ret;
 }
 
-Complex tan(Complex& com) {
+Complex tan(Complex com) {
     double comRe = real(com);
     double comIm = imag(com);
     //Real and imaginary parts for the numerator
@@ -145,7 +145,7 @@ Complex tan(Complex& com) {
     return top/bottom;
 }
 
-Complex sinh(Complex& com) {
+Complex sinh(Complex com) {
     //sinh(a)*cos(b)+i*cosh(a)*sin(b)
     double comRe = real(com);
     double comIm = imag(com);
@@ -155,7 +155,7 @@ Complex sinh(Complex& com) {
     return ret;
 }
 
-Complex cosh(Complex& com) {
+Complex cosh(Complex com) {
     //cosh(a)*cos(b)+i*sinh(a)*sin(b)
     double comRe = real(com);
     double comIm = imag(com);
@@ -165,7 +165,7 @@ Complex cosh(Complex& com) {
     return ret;
 }
 
-Complex tanh(Complex& com) {
+Complex tanh(Complex com) {
     //(tanh(x) + i tan(y)) / (1 +i tanh(x) tan(y))
     double re = real(com);
     double im = imag(com);
@@ -174,7 +174,7 @@ Complex tanh(Complex& com) {
     return top/bottom;
 }
 
-Complex asin(Complex& com) {
+Complex asin(Complex com) {
     Complex i(0, 1);
     Complex negativeI(0, -1);
     Complex comSquared = pow(com, 2);
@@ -183,12 +183,12 @@ Complex asin(Complex& com) {
     return ret;
 }
 
-Complex acos(Complex& com) {
+Complex acos(Complex com) {
     Complex ret(PI/2-real(asin(com)), -1*imag(asin(com)));
     return ret;
 }
 
-Complex atan(Complex& com) {
+Complex atan(Complex com) {
     Complex oneHalfI(0, 0.5);
     Complex i(0, 1);
     Complex oneMinusITimesCom(1-real(i*com), -1*imag(i*com));
@@ -197,6 +197,6 @@ Complex atan(Complex& com) {
     return ret;
 }
 
-Complex exp(Complex &com) {
+Complex exp(Complex com) {
     return pow(EULER, com);
 }

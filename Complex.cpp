@@ -84,6 +84,16 @@ Complex Complex::operator/(Complex& b) {
     return ret;
 }
 
+Complex Complex::operator/(double a) {
+    Complex ret (re/a, im/a);
+    return ret;
+}
+
+Complex operator/(double a, const Complex &com) {
+    Complex ret = a/norm(com)*conj(com);
+    return ret;
+}
+
 Complex& Complex::operator= (Complex b) {
     re = b.re;
     im = b.im;
