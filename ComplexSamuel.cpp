@@ -4,6 +4,16 @@
 #define PI 3.1415926538979323846
 #define EULER 2.71828182845904523536
 
+Complex Complex::operator+(double a) {
+    Complex ret(re+a, im);
+    return ret;
+}
+
+Complex operator-(double a, const Complex &com) {
+    Complex ret(a-real(com), -1*imag(com));
+    return ret;
+}
+
 Complex atanh(Complex com) {
 	Complex ret = 0.5*log(com+1) - 0.5*log(1-com);
 	return ret;
