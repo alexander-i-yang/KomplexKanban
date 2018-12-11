@@ -18,11 +18,11 @@ How to link the static library using g++ commands:
 
 3. Create the .o files in the directory.
 
-   ```C:\KomplexKanban>g++ -c Complex.cpp ComplexAlex.cpp ComplexSamuel.cpp ComplexYash.cpp```
+   ```C:\KomplexKanban>g++ -c Complex.cpp ComplexAlex.cpp ComplexSamuel.cpp ComplexYash.cpp ComplexMax.cpp```
 
 4. Link both the files into a library.
 
-   ```C:\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o ComplexSamuel.o ComplexYash.o```
+   ```C:\KomplexKanban>ar rsv ComplexLib.a Complex.o ComplexAlex.o ComplexSamuel.o ComplexYash.o ComplexMax.o```
 
 5. Compile the main runner program. (The "161114_ComplexRunner.cpp" one.)
 
