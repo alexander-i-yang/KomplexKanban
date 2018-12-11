@@ -44,13 +44,11 @@ How to link the static library using g++ commands:
 
    ```
    Hello World
-   Enter b:(3,2)
-    (3,2)
    a = (5, 6)
-   b = (3, 2)
-   a + b = (8, 8)
-   a * b = (3, 28)
-   a / b = (2.07692, 0.615385)
+   b = (1, 1)
+   a + b = (6, 7)
+   a * b = (-1, 11)
+   a / b = (5.5, 0.5)
    |a| = 7.81025
    complex conjugate of a = (5, -6)
    norm of a = 61
@@ -64,12 +62,13 @@ How to link the static library using g++ commands:
    The sqrt is: (2.1013, 1.18974)
    The natural log is: (1.76318, 1.03038)
    The sin is: (10.4725, -73.4606)
-   The acosh is: (2.45983, 1.0368)
-   The asec is: (1.4834, 0.147091)
-   The acot is: (0.0899267, -0.146947)
-   The acsc is: (0.0874005, -0.147091)
-   The acoth is: (0.0899228, -0.146956)
+   The acosh is: (2.74935, 0.88008)
+   The asec is: (1.48913, 0.09853)
+   The acot is: (0.0825743, -0.0980105)
+   The acsc is: (0.0816617, -0.09853)
+   The acoth is: (0.0825751, -0.0980127)
    The atanh is: (0.0813556, 1.4721)
+   The complex number rotated by pi/6 radians is: (1.33013, 7.69615)
    
    Process finished with exit code 0
    ```
