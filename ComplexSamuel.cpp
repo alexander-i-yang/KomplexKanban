@@ -13,3 +13,9 @@ Complex acsch(Complex com) {
 	Complex ret = asinh(pow(com, -1));
 	return ret;
 }
+
+Complex rotate(Complex com, double theta) {
+	double argument = arg(com)+theta;
+	Complex ret (abs(com)*cos(argument), abs(com)*sin(argument));
+	return ret;
+}

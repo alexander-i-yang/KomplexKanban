@@ -2,6 +2,9 @@
 #include <iostream>
 #include "Complex.h"
 
+#define PI 3.1415926538979323846
+#define EULER 2.71828182845904523536
+
 int main () {
     std::cout << "Hello World" << std::endl;
 
@@ -28,22 +31,23 @@ int main () {
 
     z1 += z2;
 
-    cout << "Complex number example: " << z1 << endl;
-    cout << "The conjugate is: " << conj(z1) << endl;
-    cout << "The magnitude is: " << abs(z1) << endl;
-    cout << "The phase in Radians is: " << arg(z1) << endl;
-    cout << "The norm is: " << norm(z1) << endl;
-    cout << "The sqrt is: " << sqrt(z1) << endl;
-    cout << "The natural log is: " << log(z1) << endl;
-    cout << "The sin is: " << sin(z1) << endl;
+    cout << "Complex number example: " << z1 << "\n";
+    cout << "The conjugate is: " << conj(z1) << "\n";
+    cout << "The magnitude is: " << abs(z1) << "\n";
+    cout << "The phase in Radians is: " << arg(z1) << "\n";
+    cout << "The norm is: " << norm(z1) << "\n";
+    cout << "The sqrt is: " << sqrt(z1) << "\n";
+    cout << "The natural log is: " << log(z1) << "\n";
+    cout << "The sin is: " << sin(z1) << "\n";
 
     /* other function testing */
-    cout << "The acosh is: " << acosh(a) << endl;
-    cout << "The asec is: " << asec(a) << endl;
-    cout << "The acot is: " << acot(a) << endl;
-    cout << "The acsc is: " << acsc(a) << endl;
-    // cout << "The asech is: " << asech(a) << endl;
-    cout << "The acoth is: " << acoth(a) << endl;
-    // cout << "Rounded to 2 decimal places: " << acosh(z1).rnd(2) << endl;
-    cout << "The atanh is: " << atanh(a) << endl;
+    cout << "The acosh is: " << acosh(a) << "\n";
+    cout << "The asec is: " << asec(a) << "\n";
+    cout << "The acot is: " << acot(a) << "\n";
+    cout << "The acsc is: " << acsc(a) << "\n";
+    // cout << "The asech is: " << asech(a) << "\n";
+    cout << "The acoth is: " << acoth(a) << "\n";
+    // cout << "Rounded to 2 decimal places: " << acosh(z1).rnd(2) << "\n";
+    cout << "The atanh is: " << atanh(a) << "\n";
+    cout << "The complex number rotated by pi/6 radians is: " << rotate(a, PI/6) << "\n";
 }

@@ -353,6 +353,15 @@ class Complex {
      */
     friend Complex acoth(Complex com);
 
+    /**
+     * Returns com rotated by theta radians
+     * @param com The complex number that will be rotated
+     * @param theta A double that the complex number will be rotated by
+     * @return A complex number that is the original complex number rotated by theta radians
+     * @author Samuel Tian
+     */
+    friend Complex rotate(Complex com, double theta);
+
 private:
     ///Real part
     double re;
