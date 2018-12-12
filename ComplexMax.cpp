@@ -1,3 +1,14 @@
+/*
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Title : ComplexMax.cpp
+Author : Max Wienreb
+URL : NA
+Description : Functions for complex numbers
+Created : 12/5/2018
+Modified : 12/11/2018
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
+
 #include <cmath>
 #include "Complex.h"
 
