@@ -1,6 +1,13 @@
-//
-// Created by Yash Patil on 12/8/2018.
-//
+/*
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Title : ComplexYash.cpp
+Author : Yash Patil
+URL : NA
+Description : Trig functions for complex numbers
+Created : 12/5/2018
+Modified : 12/11/2018
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
 
 #include <cmath>
 #include "Complex.h"
