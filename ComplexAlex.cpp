@@ -15,11 +15,11 @@ Modified : Dec. 11th
 #define PI 3.1415926538979323846
 #define EULER 2.71828182845904523536
 
-Complex::Complex() : Complex(0, 0) {}
+Complex::Complex() {Complex(0, 0);}
 
-Complex::Complex(double r, double i) : re(r), im(i) {}
+Complex::Complex(double r, double i) {re = r; im = i;}
 
-Complex::Complex(double r) : Complex(r, 0) {}
+Complex::Complex(double r) {Complex(r, 0);}
 
 ostream& operator<< (ostream& out, const Complex& me) {
     out << "(" << me.re << ", " << me.im << ")";
