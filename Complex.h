@@ -1,6 +1,13 @@
-//
-// Created by Alex on 12/7/2018.
-//
+/*
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Title : Complex
+Author : Alex Yang
+URL : NA
+Description : The complex class for complex numbers, and the functions that can be used upon them
+Created : Nov. 28th
+Modified : Dec. 11th
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
 
 #ifndef KOMPLEXKANBAN2_COMPLEX_H
 #define KOMPLEXKANBAN2_COMPLEX_H
@@ -295,7 +302,7 @@ class Complex {
      * @return A complex number that is the inverse hyperbolic sin of com
      * @author Max Weinreb
      */
-    friend Complex asinh(Complex com);    
+    friend Complex asinh(Complex com);
 
     /**
      * Returns the inverse secant of the argument
