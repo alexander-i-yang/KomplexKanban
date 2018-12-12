@@ -332,7 +332,7 @@ class Complex {
      * Returns the inverse hyperbolic secant of the argument
      * @param com The complex number to find the inverse hyperbolic secant of
      * @return A complex number that is the inverse hyperbolic secant of com
-     * @author Yash Patil
+     * @author Ethan Boldando
      */
     friend Complex asech(Complex com);
 
@@ -387,6 +387,14 @@ public:
      * @author Alex Yang
      */
     explicit Complex(double r);
+
+    /**
+     *Returns the complex number rounded to specified decimal places
+     *@param place The number of decimal places to round number to
+     *@return A complex number rounded to specified places in the real part of number
+     *@author Ethan Baldonado
+     */
+    Complex rnd(int place);
 
     /**
      * Adds real and imaginary parts of this complex number and b

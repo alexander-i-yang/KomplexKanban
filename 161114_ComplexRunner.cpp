@@ -66,8 +66,7 @@ int main () {
 
     cout << "The asinh is:" << asinh(a) << "\n";
     cout << "The acosh is: " << acosh(a) << "\n";
-    //TODO: implement the rnd function
-    // cout << "Rounded to 2 decimal places: " << acosh(z1).rnd(2) << "\n";
+    cout << "Rounded to 2 decimal places: " << acosh(a).rnd(2) << "\n";
     cout << "The atanh is: " << atanh(a) << "\n";
     cout << "The acsch is: " << acsch(a) << "\n";
     cout << "The asech is: " << asech(a) << "\n";
