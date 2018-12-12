@@ -57,6 +57,9 @@ int main () {
     cout << "cos(a) = " << cos(a) << "\n";
     cout << "tan(a) = " << tan(a) << "\n\n";
 
+    cout << "The asin is: " << asin(a) << "\n";
+    cout << "The acos is: " << acos(a) << "\n";
+    cout << "The atan is: " << atan(a) << "\n";
     cout << "The acsc is: " << acsc(a) << "\n";
     cout << "The asec is: " << asec(a) << "\n";
     cout << "The acot is: " << acot(a) << "\n\n";
