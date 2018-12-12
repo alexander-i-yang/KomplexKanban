@@ -20,11 +20,11 @@ How to link the static library using g++ commands:
 
 3. Create the .o files in the directory.
 
-   ```C:\KomplexKanban>g++ -c ComplexAlex.cpp ComplexSamuel.cpp ComplexYash.cpp ComplexMax.cpp```
+   ```C:\KomplexKanban>g++ -c ComplexAlex.cpp ComplexSamuel.cpp ComplexYash.cpp ComplexMax.cpp ComplexEthan.cpp```
 
 4. Link both the files into a library.
 
-   ```C:\KomplexKanban>ar rsv ComplexLibrary.a ComplexAlex.o ComplexSamuel.o ComplexYash.o ComplexMax.o```
+   ```C:\KomplexKanban>ar rsv ComplexLibrary.a ComplexAlex.o ComplexSamuel.o ComplexYash.o ComplexMax.o ComplexEthan.o```
 
 5. Compile the main runner program. (The "161114_ComplexRunner.cpp" one.)
 
@@ -89,6 +89,7 @@ How to link the static library using g++ commands:
    
    The asinh is:(2.74787, 0.872018)
    The acosh is: (2.74935, 0.88008)
+   Rounded to 2 decimal places: (2.74, 0.88)
    The atanh is: (0.0813556, 1.4721)
    The acsch is: (0.0822711, -0.0981864)
    The asech is: (0.09853, -1.48913)
