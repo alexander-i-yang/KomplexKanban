@@ -3,7 +3,8 @@
 Title : ComplexSamuel.cpp
 Author : Samuel Tian
 URL : NA
-Description : Functions for complex numbers
+Description : Description : operator overloading for arithmetic operators
+and implementation of trig functions and rotate function
 Created : 12/5/2018
 Modified : 12/11/2018
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
