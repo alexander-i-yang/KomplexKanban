@@ -20,14 +20,14 @@ class Complex {
      * @return com.re
      * @author Alex Yang
      */
-    friend double real(const Complex com);
+    friend double real(Complex com);
     /**
      * Returns the imaginary part of com
      * @param com The complex number to find the real part of
      * @return com.im
      * @author Alex Yang
      */
-    friend double imag(const Complex the);
+    friend double imag(Complex the);
 
     /**
      * Operator overload for multiplying doubles and complex numbers
@@ -124,14 +124,6 @@ class Complex {
      * @return The complex number formed by mag and ang
      */
     friend Complex polar(double mag, double ang);
-
-    /**
-     * Returns the real part of the parameter
-     * @param com the Complex number to find the real part of
-     * @return the real part of com
-     * @author Alex Yang
-     */
-    friend double real(const Complex com);
 
     /**
      * Returns the log of com in the format ln(abs(com))+i*arg(com).
@@ -449,7 +441,7 @@ public:
      * Operator overload for dividing complex numbers and integers (format com*a)
      * @param a The integer to divide by
      * @return com/a
-     * @author Max Weinred
+     * @author Max Weinreb
      */
     Complex operator/(double a);
 
@@ -489,7 +481,7 @@ public:
      * Divides this complex number and b.
      * @param b The second complex number to divide by this one
      * @return The resulting complex number
-     * @author Alex yang
+     * @author Alex Yang
      */
     Complex operator/=(Complex b);
 
